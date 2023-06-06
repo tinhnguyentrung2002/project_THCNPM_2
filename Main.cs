@@ -118,6 +118,7 @@ namespace DoAn
         {
             frmLogin frmLogin = new frmLogin();
             frmLogin.Close();
+            ShowMessage();
              string Str = "SELECT TableNV.Hoten FROM TableNV INNER JOIN TableUser ON TableNV.MaNV = TableUser.MaNV WHERE(TableUser.Username = '" + frmLogin.UserName + "')";
              string Str2 = "SELECT Chucvu FROM TableNV INNER JOIN TableUser ON TableNV.MaNV = TableUser.MaNV WHERE(TableUser.Username = '" + frmLogin.UserName + "')";
              DataTable dt = new DataTable();
@@ -290,6 +291,10 @@ namespace DoAn
         {
             frmChangePasscs change = new frmChangePasscs();
             change.Show();
+        }
+        public void ShowMessage()
+        {
+            MessageBox.Show("Hello guys, Welcome to my software !");
         }
     }
 }
